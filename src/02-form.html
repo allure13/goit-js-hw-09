@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 3</title>
+    <title>feedback form</title>
+    <link rel="stylesheet" href="./css/form.css" />
   </head>
   <body>
     <section>
       <a href="./index.html">Go to home</a>
-      <h1>Welcome to page 3</h1>
+      <form class="feedback-form" autocomplete="off">
+        <div class="feedback-wrap">
+          <label class="feedback-label">
+            Email
+            <input class="feedback-input" type="email" name="email" autofocus />
+          </label>
+          <label class="feedback-label">
+            Message
+            <textarea class="feedback-txt" name="message" rows="8"></textarea>
+          </label>
+        </div>
+
+        <button class="feedback-btn" type="submit">Submit</button>
+      </form>
     </section>
     <script type="module" src="./js/02-form.js"></script>
   </body>
