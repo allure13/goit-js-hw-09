@@ -21,13 +21,15 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    localStorage.removeItem('feedback-form-state');
-    form.reset();
-
     const formData = {
       email: form.elements.email.value,
       message: form.elements.message.value,
     };
-    console.log(formData);
+    if (formData.email && formData.message) {
+      console.log(formData);
+    }
+
+    localStorage.removeItem('feedback-form-state');
+    form.reset();
   });
 });
